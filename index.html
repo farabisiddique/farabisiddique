@@ -1153,7 +1153,7 @@
 
     <!-- ==================== FOOTER ==================== -->
     <footer>
-        <p>Designed &amp; built by <span>Earshadul Bari Siddique</span> &nbsp;·&nbsp; farabisiddique.com &nbsp;·&nbsp; <span>2025</span></p>
+        <p>Designed &amp; built by <span>Earshadul Bari Siddique</span> &nbsp;·&nbsp; farabisiddique.com &nbsp;·&nbsp; <span id="current-year">2025</span></p>
     </footer>
 
     <!-- ==================== JAVASCRIPT ==================== -->
@@ -1241,6 +1241,9 @@
             });
         }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
         reveals.forEach(el => revObs.observe(el));
+
+        // ---- Dynamic year ----
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
         // ---- Smooth scroll for hero CTA ----
         document.querySelectorAll('a[href^="#"]').forEach(a => {
